@@ -1,0 +1,41 @@
+
+* {
+  padding: 0;
+  margin: 0;
+}
+nav {
+  width: 100%;
+  background-color: rgb(9, 8, 8);
+  height: 60px;
+  color: white;
+}
+.nav-box {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.my-shop{
+    font-size: 1.5 rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.cart{
+    cursor: pointer;
+    margin: 10px;
+}
+.cart span:nth-child(1){
+    font-size: 2rem;
+}
+.cart span:nth-child(2){
+    padding: 0 3px;
+    background-color: aquamarine;
+    color: black;
+    font-weight: bold;
+    position: relative;
+    top: -15px;
+    border-radius: 50%;
+}

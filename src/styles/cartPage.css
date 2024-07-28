@@ -1,0 +1,100 @@
+/* cartPage.css */
+
+.cart-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.cart-box:hover {
+  transform: scale(1.02);
+}
+
+.cart-img {
+  display: flex;
+  align-items: center;
+}
+
+.cart-img img {
+  width: 50px;
+  height: 50px;
+  margin-right: 1rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.cart-img img:hover {
+  transform: rotate(5deg);
+}
+
+.cart-img p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+button:active {
+  background-color: #111;
+}
+
+.cart-box button:last-child {
+  background-color: red;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.cart-box button:last-child:hover {
+  background-color: darkred;
+}
+
+.cart-box span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
+/* Animation for adding/removing items */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+.cart-box.added {
+  animation: slideIn 0.5s forwards;
+}
+
+.cart-box.removed {
+  animation: slideOut 0.5s forwards;
+}
